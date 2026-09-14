@@ -1,0 +1,5 @@
+# configurações locais do editor/ambiente
+.claude/
+.vercel/
+.DS_Store
+Thumbs.db

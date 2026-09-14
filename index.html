@@ -1,0 +1,351 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Eliel Dutra — Terapeuta TRG e Psicanalista</title>
+  <meta name="description" content="Eliel Dutra, Terapeuta TRG e Psicanalista. Uma escuta de verdade, sem máscara. Da raiz da dor à liberdade de ser.">
+  <meta name="theme-color" content="#0A1628">
+  <meta property="og:title" content="Eliel Dutra — Terapeuta TRG e Psicanalista">
+  <meta property="og:description" content="Da raiz da dor à liberdade de ser.">
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/svg+xml" href="assets/logo.svg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,400&family=Jost:wght@300;400&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+  <script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+
+  <!-- Símbolo da marca (reutilizável) -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="mark" viewBox="0 0 200 200">
+      <g fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round">
+        <path d="M100 16 V184"/>
+        <path d="M136 22 C118 26 108 50 105 90 C104 104 104 112 105 126 C107 150 116 166 130 178"/>
+        <path d="M64 22 C82 26 92 50 95 90 C96 104 96 112 95 126 C93 150 84 166 70 178"/>
+        <path d="M174 62 C170 40 144 30 124 44 C112 53 108 72 107 92 C105 104 105 112 107 124 C112 144 138 156 166 164"/>
+        <path d="M26 62 C30 40 56 30 76 44 C88 53 92 72 93 92 C95 104 95 112 93 124 C88 144 62 156 34 164"/>
+      </g>
+    </symbol>
+  </svg>
+
+  <a class="skip" href="#sobre">Pular para o conteúdo</a>
+
+  <!-- ===== Topo ===== -->
+  <header class="topbar" data-topbar>
+    <div class="topbar-inner">
+      <a class="brand" href="#inicio" aria-label="Eliel Dutra — início">
+        <svg class="brand-mark" aria-hidden="true"><use href="#mark"/></svg>
+        <span class="brand-text">
+          <span class="brand-name">Eliel Dutra</span>
+          <span class="brand-sub">Terapeuta TRG e Psicanalista</span>
+        </span>
+      </a>
+      <a class="topbar-cta" data-wa>Agendar</a>
+    </div>
+  </header>
+
+  <!-- ===== Linha-raiz de scroll (assinatura) ===== -->
+  <div class="rail" data-rail-root aria-hidden="true">
+    <span class="rail-track"></span>
+    <span class="rail-line"></span>
+    <span class="rail-tip"></span>
+  </div>
+
+  <main>
+
+    <!-- 1. HERO -->
+    <section id="inicio" class="section hero" data-rail="Início">
+      <div class="hero-art" data-hero-art>
+        <svg class="tree" viewBox="-16 18 332 350" role="img" aria-label="Ilustração: uma pessoa descansando sob uma árvore frondosa">
+          <defs>
+            <radialGradient id="heroGlow" gradientUnits="userSpaceOnUse" cx="150" cy="118" r="175">
+              <stop offset="0" stop-color="#D9AE4F" stop-opacity=".22"/>
+              <stop offset=".55" stop-color="#D9AE4F" stop-opacity=".06"/>
+              <stop offset="1" stop-color="#D9AE4F" stop-opacity="0"/>
+            </radialGradient>
+            <linearGradient id="groundFade" gradientUnits="userSpaceOnUse" x1="-10" y1="0" x2="310" y2="0">
+              <stop offset="0" stop-color="#B8860B" stop-opacity="0"/>
+              <stop offset=".5" stop-color="#B8860B" stop-opacity=".6"/>
+              <stop offset="1" stop-color="#B8860B" stop-opacity="0"/>
+            </linearGradient>
+            <linearGradient id="rootGrad" gradientUnits="userSpaceOnUse" x1="0" y1="292" x2="0" y2="356">
+              <stop offset="0" stop-color="#fff"/>
+              <stop offset="1" stop-color="#000"/>
+            </linearGradient>
+            <mask id="rootMask" maskUnits="userSpaceOnUse" x="-16" y="290" width="332" height="80">
+              <rect x="-16" y="290" width="332" height="80" fill="url(#rootGrad)"/>
+            </mask>
+          </defs>
+
+          <rect class="glow" x="-16" y="18" width="332" height="300" fill="url(#heroGlow)"/>
+
+          <!-- luz filtrada no chão -->
+          <g class="dapples" fill="#D9AE4F">
+            <ellipse cx="208" cy="297" rx="16" ry="2" style="--t:7s"/>
+            <ellipse cx="116" cy="298" rx="11" ry="1.6" style="--t:9s;--dl:-3s"/>
+            <ellipse cx="256" cy="296" rx="8" ry="1.4" style="--t:8s;--dl:-5s"/>
+          </g>
+
+          <!-- raízes (desenham primeiro) -->
+          <g class="roots" mask="url(#rootMask)" stroke="#B8860B" stroke-width="1.6" stroke-linecap="round" fill="none">
+            <path class="draw" pathLength="1" style="--d:.1s" d="M150 292 V352"/>
+            <path class="draw" pathLength="1" style="--d:.2s" d="M154 292 C156 312 164 330 180 344"/>
+            <path class="draw" pathLength="1" style="--d:.2s" d="M146 292 C144 312 136 330 120 344"/>
+            <path class="draw" pathLength="1" style="--d:.3s" d="M158 292 C166 310 192 322 224 330"/>
+            <path class="draw" pathLength="1" style="--d:.3s" d="M142 292 C134 310 108 322 76 330"/>
+          </g>
+
+          <path class="ground" d="M-10 292 H310" stroke="url(#groundFade)" stroke-width="1"/>
+
+          <!-- tronco e galhos: a mesma linha que vem da raiz -->
+          <g class="trunk" stroke="#B8860B" stroke-width="2" stroke-linecap="round" fill="none">
+            <path class="draw" pathLength="1" style="--d:.55s" d="M150 292 V62"/>
+            <path class="draw" pathLength="1" style="--d:.65s" d="M154 292 C154 250 153 200 154 160 C155 120 160 80 178 54"/>
+            <path class="draw" pathLength="1" style="--d:.65s" d="M146 292 C146 250 147 200 146 160 C145 120 140 80 122 54"/>
+            <path class="draw" pathLength="1" style="--d:.75s" d="M158 292 C158 250 157 200 159 160 C161 118 176 92 200 84 C222 77 240 90 244 112"/>
+            <path class="draw" pathLength="1" style="--d:.75s" d="M142 292 C142 250 143 200 141 160 C139 118 124 92 100 84 C78 77 60 90 56 112"/>
+            <path class="draw" pathLength="1" style="--d:1s" d="M156 196 C170 160 214 140 250 142 C276 144 292 160 296 178"/>
+            <path class="draw" pathLength="1" style="--d:1s" d="M144 196 C130 160 86 140 50 142 C24 144 8 160 4 178"/>
+          </g>
+
+          <!-- copa: folhas geradas em script.js -->
+          <g class="canopy" data-canopy>
+            <g class="sway sway-a"></g>
+            <g class="sway sway-b"></g>
+            <g class="sway sway-c"></g>
+          </g>
+
+          <!-- uma folha que cai, de vez em quando -->
+          <g class="fall">
+            <path transform="translate(232 150)" d="M0 -6 C3.4 -2.5 3.4 2.5 0 6 C-3.4 2.5 -3.4 -2.5 0 -6Z" fill="#D9AE4F" fill-opacity=".75"/>
+          </g>
+
+          <!-- partículas de luz -->
+          <g class="motes" fill="#E6C77E">
+            <circle cx="62" cy="160" r="1.3" style="--dl:0s"/>
+            <circle cx="232" cy="122" r="1.1" style="--dl:-2.5s"/>
+            <circle cx="112" cy="206" r="1.2" style="--dl:-5s"/>
+            <circle cx="272" cy="196" r="1" style="--dl:-7s"/>
+          </g>
+
+          <!-- a pessoa, recostada no tronco -->
+          <g class="person">
+            <g class="breath" stroke="#F2ECDF" stroke-width="1.6" stroke-linecap="round" fill="none">
+              <path class="draw" pathLength="1" style="--d:1.7s" d="M172 292 C190 292 214 293 238 291"/>
+              <path class="draw" pathLength="1" style="--d:1.75s" d="M168 291 C178 284 187 275 196 268 C200 276 204 284 208 292"/>
+              <path class="draw" pathLength="1" style="--d:1.8s" d="M167 291 C163 278 163 263 166 251"/>
+              <path class="draw" pathLength="1" style="--d:1.95s" d="M166 257 C174 266 184 271 194 269"/>
+              <g class="head">
+                <circle class="draw" pathLength="1" style="--d:2s" cx="171" cy="241" r="7.5"/>
+              </g>
+            </g>
+          </g>
+        </svg>
+      </div>
+
+      <div class="inner hero-text">
+        <h1 class="hero-title wipe" style="--d:.9s">Eu sei o quanto pode ser difícil pedir ajuda.</h1>
+
+        <p class="fade" style="--d:1.35s">Por isso, antes de qualquer coisa: aqui você não vai encontrar um profissional sentado numa poltrona só anotando o que você diz.</p>
+        <p class="fade" style="--d:1.5s">Eu quero te ouvir de verdade — e criar um espaço onde você se sinta à vontade pra se abrir de um jeito real, sem máscara.</p>
+
+        <div class="signature">
+          <span class="signature-name wipe" style="--d:1.7s">Eliel Dutra</span>
+          <span class="signature-role fade" style="--d:1.9s">Terapeuta TRG e Psicanalista</span>
+        </div>
+
+        <a class="btn btn--solid fade" style="--d:2s" data-wa>
+          Agendar uma conversa
+          <svg class="btn-arrow" viewBox="0 0 20 10" aria-hidden="true"><path d="M0 5h18M14 1l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.2"/></svg>
+        </a>
+
+        <p class="slogan wipe" style="--d:2.3s">Da raiz da dor à liberdade de ser.</p>
+      </div>
+    </section>
+
+    <!-- 2. SOBRE -->
+    <section id="sobre" class="section" data-rail="Sobre">
+      <div class="inner">
+        <p class="label">Sobre</p>
+        <h2 class="title wipe">Já vi gente que saiu de terapia achando que só desabafou pra uma parede.</h2>
+
+        <div class="prose">
+          <p>Não é assim que eu trabalho. Claro, levo minha formação a sério — mas o que mais importa pra mim, antes de qualquer técnica, é criar uma conversa de verdade.</p>
+          <p>Uso Psicanálise, Logoterapia e Terapia TRG juntas porque cada pessoa que chega até mim precisa de um caminho diferente. Não tem fórmula pronta.</p>
+          <p>E se em algum momento fizer sentido pra você trazer a espiritualidade pra essa conversa, tem espaço pra isso também — no seu tempo, do seu jeito.</p>
+        </div>
+
+        <figure class="portrait" data-reveal>
+          <div class="portrait-frame">
+            <img src="assets/eliel.jpg" alt="Eliel Dutra sentado em uma poltrona, sorrindo, em um ambiente acolhedor com lareira" width="754" height="768" loading="lazy" onerror="this.remove()">
+            <span class="portrait-ph" aria-hidden="true">
+              <svg><use href="#mark"/></svg>
+              <span>Foto de Eliel</span>
+            </span>
+          </div>
+          <svg class="portrait-line" viewBox="0 0 280 360" preserveAspectRatio="none" aria-hidden="true">
+            <path class="draw" pathLength="1" d="M1 360 V140 A139 139 0 0 1 279 140 V360"/>
+          </svg>
+          <figcaption>Eliel Dutra</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- 3. COMO EU TRABALHO + POR QUE CONVERSAR COMIGO -->
+    <section id="trabalho" class="section section--soft" data-rail="Como trabalho">
+      <div class="inner">
+        <p class="label">Como eu trabalho</p>
+        <h2 class="title wipe">Meu foco não é aliviar o sintoma por alguns dias.</h2>
+
+        <p class="statement">É entender de onde ele vem — e ajudar você a não precisar mais carregar aquilo sozinho.</p>
+
+        <div class="prose">
+          <p>Isso só acontece quando existe confiança de verdade. Por isso, antes de qualquer técnica, eu me importo em criar um espaço onde você não precise se policiar pra falar comigo.</p>
+          <p class="quiet">Sem julgamento, sem pressa, sem respostas prontas.</p>
+        </div>
+
+        <h3 class="label label--spaced">Por que conversar comigo</h3>
+
+        <ol class="diffs">
+          <li>
+            <span class="diff-n wipe" aria-hidden="true">1</span>
+            <h4 class="diff-title">Você é ouvido, não só analisado</h4>
+            <p>Eu não estou aqui pra te encaixar num diagnóstico. Estou aqui pra entender você.</p>
+          </li>
+          <li>
+            <span class="diff-n wipe" aria-hidden="true">2</span>
+            <h4 class="diff-title">A gente vai até a raiz, não só até o alívio</h4>
+            <p>Sintomas voltam quando a causa continua lá. Meu trabalho é chegar nela com você.</p>
+          </li>
+          <li>
+            <span class="diff-n wipe" aria-hidden="true">3</span>
+            <h4 class="diff-title">Sigilo absoluto, sempre</h4>
+            <p>O que é dito aqui fica aqui. Sem exceções.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- 4. AUTOAVALIAÇÃO -->
+    <section id="autoavaliacao" class="section section--cream" data-rail="Autoavaliação" data-light>
+      <div class="inner">
+        <p class="label">Autoavaliação emocional</p>
+        <h2 class="title wipe">Antes de decidir, que tal olhar pra dentro por um minuto?</h2>
+
+        <div class="quiz" data-quiz>
+          <div class="quiz-intro" data-quiz-intro>
+            <p>São 7 perguntas rápidas. Responda com sinceridade, pensando nas últimas semanas — não existe resposta certa.</p>
+            <button class="btn btn--solid" type="button" data-quiz-start>Começar o teste</button>
+            <p class="fineprint">Suas respostas ficam só no seu aparelho — nada é enviado ou armazenado.</p>
+          </div>
+
+          <div class="quiz-stage" data-quiz-stage hidden>
+            <div class="quiz-progress">
+              <span class="quiz-count" data-quiz-count>Pergunta 1 de 7</span>
+              <span class="quiz-steps" data-quiz-steps aria-hidden="true"></span>
+            </div>
+            <p class="quiz-q wipe" data-quiz-q tabindex="-1" aria-live="polite"></p>
+            <div class="scale" role="radiogroup" aria-label="Com que frequência?" data-quiz-scale></div>
+            <button class="link-btn" type="button" data-quiz-back hidden>← Voltar</button>
+          </div>
+
+          <div class="quiz-result" data-quiz-result hidden>
+            <p class="label">Seu resultado</p>
+            <div class="meter" aria-hidden="true"><i data-quiz-marker></i><span>7</span><span>35</span></div>
+            <p class="quiz-score" data-quiz-score></p>
+            <h3 class="result-title wipe" data-quiz-title tabindex="-1"></h3>
+            <p class="result-text" data-quiz-text></p>
+            <p class="result-note">Isso aqui é só uma ferramenta de autoconhecimento, viu? Não substitui uma avaliação profissional — mas pode ser o empurrão pra gente conversar.</p>
+            <a class="btn btn--solid btn--long" data-wa>Falar com o Eliel no WhatsApp</a>
+            <p class="fineprint" data-quiz-crisis hidden>Se você estiver em sofrimento intenso agora, ligue <strong>188</strong> (CVV) — gratuito, 24 horas.</p>
+            <button class="link-btn" type="button" data-quiz-restart>Refazer o teste</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. FORMAÇÃO -->
+    <section id="formacao" class="section" data-rail="Formação">
+      <div class="inner">
+        <p class="label">Formação</p>
+        <h2 class="title wipe">Três abordagens, uma mesma escuta.</h2>
+
+        <!-- Adicione aqui instituições, anos e registros profissionais -->
+        <dl class="approaches">
+          <div>
+            <dt class="wipe">Terapia TRG</dt>
+            <dd>Terapia de Reprocessamento Generativo: trabalha a raiz emocional de traumas, ansiedade e bloqueios.</dd>
+          </div>
+          <div>
+            <dt class="wipe">Psicanálise</dt>
+            <dd>Pra compreender o que se repete na sua história e dar palavra ao que ainda não foi dito.</dd>
+          </div>
+          <div>
+            <dt class="wipe">Logoterapia</dt>
+            <dd>A abordagem de Viktor Frankl: reencontrar sentido, mesmo em meio ao sofrimento.</dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- 6. CONTATO -->
+    <section id="contato" class="section section--end" data-rail="Contato">
+      <div class="inner">
+        <svg class="end-mark" viewBox="0 0 200 200" data-reveal aria-hidden="true">
+          <g fill="none" stroke="#B8860B" stroke-width="3.5" stroke-linecap="round">
+            <path class="draw" pathLength="1" style="--d:0s" d="M100 184 V16"/>
+            <path class="draw" pathLength="1" style="--d:.25s" d="M130 178 C116 166 107 150 105 126 C104 112 104 104 105 90 C108 50 118 26 136 22"/>
+            <path class="draw" pathLength="1" style="--d:.25s" d="M70 178 C84 166 93 150 95 126 C96 112 96 104 95 90 C92 50 82 26 64 22"/>
+            <path class="draw" pathLength="1" style="--d:.5s" d="M166 164 C138 156 112 144 107 124 C105 112 105 104 107 92 C108 72 112 53 124 44 C144 30 170 40 174 62"/>
+            <path class="draw" pathLength="1" style="--d:.5s" d="M34 164 C62 156 88 144 93 124 C95 112 95 104 93 92 C92 72 88 53 76 44 C56 30 30 40 26 62"/>
+          </g>
+        </svg>
+
+        <p class="label">Contato</p>
+        <h2 class="title wipe">Quando fizer sentido pra você, eu estou aqui.</h2>
+        <div class="prose">
+          <p>Me manda uma mensagem. A gente conversa e vê, junto, qual é o melhor caminho pra você.</p>
+        </div>
+        <a class="btn btn--solid" data-wa>
+          Agendar uma conversa
+          <svg class="btn-arrow" viewBox="0 0 20 10" aria-hidden="true"><path d="M0 5h18M14 1l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.2"/></svg>
+        </a>
+        <p class="fineprint fineprint--dark">Pelo WhatsApp · Atendimento com sigilo absoluto</p>
+
+        <a class="insta" href="https://www.instagram.com/eliel.terapeutatrg/" target="_blank" rel="noopener">
+          <svg class="insta-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5.5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.6" r=".9" class="insta-dot"/></svg>
+          <span class="insta-text">
+            <span class="insta-lead">No Instagram, compartilho conselhos sobre vários temas</span>
+            <span class="insta-handle">@eliel.terapeutatrg</span>
+          </span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== Rodapé ===== -->
+  <footer class="footer">
+    <svg class="footer-mark" aria-hidden="true"><use href="#mark"/></svg>
+    <p class="footer-name">Eliel Dutra</p>
+    <p class="footer-role">Terapeuta TRG e Psicanalista</p>
+    <p class="slogan">Da raiz da dor à liberdade de ser.</p>
+    <a class="footer-social" href="https://www.instagram.com/eliel.terapeutatrg/" target="_blank" rel="noopener" aria-label="Instagram de Eliel Dutra (@eliel.terapeutatrg)">
+      <svg class="insta-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5.5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.6" r=".9" class="insta-dot"/></svg>
+    </a>
+    <p class="footer-copy">© <span data-year>2026</span> Eliel Dutra</p>
+  </footer>
+
+  <!-- CTA flutuante (mobile) -->
+  <a class="dock" data-wa data-dock>
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 18.5 5.2 15A7.5 7.5 0 1 1 8.6 18l-4.6.5Z" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg>
+    Agendar uma conversa
+  </a>
+
+  <script src="script.js"></script>
+</body>
+</html>
