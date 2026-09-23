@@ -155,6 +155,7 @@
   const dock = $('[data-dock]');
   const art = $('[data-hero-art]');
   const quizSection = $('#autoavaliacao');
+  const testiSection = $('#relatos');
   const contact = $('#contato');
 
   function measure() {
@@ -210,8 +211,10 @@
       const q = quizSection.getBoundingClientRect();
       const c = contact.getBoundingClientRect();
       const inQuiz = q.top < vh * 0.8 && q.bottom > vh * 0.2;
+      const t = testiSection ? testiSection.getBoundingClientRect() : null;
+      const inTesti = t ? t.top < vh * 0.8 && t.bottom > vh * 0.2 : false;
       const nearEnd = c.top < vh * 0.9;
-      dock.classList.toggle('is-shown', scrollY > hero.offsetHeight * 0.7 && !inQuiz && !nearEnd);
+      dock.classList.toggle('is-shown', scrollY > hero.offsetHeight * 0.7 && !inQuiz && !inTesti && !nearEnd);
     }
   }
 
@@ -337,4 +340,98 @@
   const ready = document.fonts && document.fonts.ready ? document.fonts.ready : Promise.resolve();
   Promise.race([ready, new Promise((r) => setTimeout(r, 900))]).then(() => requestAnimationFrame(start));
   measure();
+})();
+
+/* ===== Carrossel de relatos ===== */
+(() => {
+  'use strict';
+
+  const root = document.querySelector('[data-testi]');
+  if (!root) return;
+
+  const track = root.querySelector('[data-testi-track]');
+  const viewport = root.querySelector('[data-testi-viewport]');
+  const dotsEl = root.querySelector('[data-testi-dots]');
+  const cards = [...track.children];
+  if (!cards.length) return;
+
+  const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const DELAY = 9000;
+  let index = 0;
+  let timer = null;
+
+  const dots = cards.map((_, i) => {
+    const b = document.createElement('button');
+    b.type = 'button';
+    b.className = 'testi-dot';
+    b.setAttribute('aria-label', `Relato ${i + 1} de ${cards.length}`);
+    b.addEventListener('click', () => { go(i); restart(); });
+    dotsEl.appendChild(b);
+    return b;
+  });
+
+  function go(i) {
+    index = (i + cards.length) % cards.length;
+    track.style.transform = `translateX(${-index * 100}%)`;
+    dots.forEach((d, k) => {
+      d.classList.toggle('is-active', k === index);
+      d.setAttribute('aria-current', k === index ? 'true' : 'false');
+    });
+    cards.forEach((c, k) => {
+      c.setAttribute('aria-hidden', k === index ? 'false' : 'true');
+      c.querySelectorAll('a, button').forEach((el) => { el.tabIndex = k === index ? 0 : -1; });
+    });
+  }
+
+  const next = () => go(index + 1);
+  const prev = () => go(index - 1);
+
+  function start() {
+    if (reduceMotion || timer) return;
+    timer = setInterval(next, DELAY);
+  }
+  function stop() {
+    clearInterval(timer);
+    timer = null;
+  }
+  function restart() {
+    stop();
+    start();
+  }
+
+  root.querySelector('[data-testi-next]').addEventListener('click', () => { next(); restart(); });
+  root.querySelector('[data-testi-prev]').addEventListener('click', () => { prev(); restart(); });
+
+  // pausa ao passar o mouse ou ao focar com o teclado
+  root.addEventListener('mouseenter', stop);
+  root.addEventListener('mouseleave', start);
+  root.addEventListener('focusin', stop);
+  root.addEventListener('focusout', start);
+  document.addEventListener('visibilitychange', () => (document.hidden ? stop() : start()));
+
+  // setas do teclado quando o carrossel está em foco
+  root.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowRight') { next(); restart(); }
+    if (e.key === 'ArrowLeft') { prev(); restart(); }
+  });
+
+  // swipe no celular
+  let x0 = null;
+  let y0 = null;
+  viewport.addEventListener('touchstart', (e) => {
+    x0 = e.touches[0].clientX;
+    y0 = e.touches[0].clientY;
+    stop();
+  }, { passive: true });
+  viewport.addEventListener('touchend', (e) => {
+    if (x0 === null) return;
+    const dx = e.changedTouches[0].clientX - x0;
+    const dy = e.changedTouches[0].clientY - y0;
+    if (Math.abs(dx) > 45 && Math.abs(dx) > Math.abs(dy)) dx < 0 ? next() : prev();
+    x0 = y0 = null;
+    start();
+  }, { passive: true });
+
+  go(0);
+  start();
 })();

@@ -310,7 +310,7 @@ h1, h2, h3, h4, p, dl, dd, figure { margin: 0; }
 .signature { margin: 38px auto 40px; display: flex; flex-direction: column; align-items: center; gap: 4px; }
 .signature::before { content: ""; width: 1px; height: 30px; background: var(--gold); opacity: .6; margin-bottom: 14px; }
 .signature-name { font-family: var(--serif); font-style: italic; font-size: 1.55rem; line-height: 1.2; }
-.signature-role { font-size: .62rem; letter-spacing: .26em; text-transform: uppercase; color: var(--text-soft); }
+.signature-role { font-size: .68rem; letter-spacing: .28em; text-transform: uppercase; color: var(--gold-lt); }
 
 .hero .slogan { margin-top: 48px; }
 
@@ -610,4 +610,172 @@ h1, h2, h3, h4, p, dl, dd, figure { margin: 0; }
     stroke-dashoffset: 0 !important; transition: none !important;
   }
   .fall, .motes circle { display: none; }
+}
+
+/* ==========================================================
+   Hero: título principal e subtítulo
+   ========================================================== */
+
+.signature-sub {
+  margin-top: 12px; max-width: 34ch;
+  font-size: .85rem; line-height: 1.65; letter-spacing: .01em;
+  color: var(--text-soft); text-transform: none;
+}
+
+/* ==========================================================
+   Formação
+   ========================================================== */
+
+.seal {
+  display: inline-block; margin-bottom: 34px;
+  padding: 12px 26px;
+  border: 1px solid var(--gold); border-radius: 999px;
+  background: rgba(184, 134, 11, .1);
+  font-size: .7rem; letter-spacing: .26em; text-transform: uppercase;
+  color: var(--gold-lt);
+}
+
+.specs { list-style: none; padding: 0; margin: 0 auto; display: grid; gap: 16px; max-width: 30em; }
+.spec {
+  padding: 34px 26px;
+  border: 1px solid var(--gold-hair); border-radius: 20px;
+  background: rgba(255, 255, 255, .022);
+}
+.spec-icon {
+  width: 30px; height: 30px; margin: 0 auto 18px; display: block;
+  fill: none; stroke: var(--gold-lt); stroke-width: 1.2; stroke-linecap: round;
+}
+.spec h4 {
+  font-family: var(--serif); font-weight: 400;
+  font-size: 1.35rem; line-height: 1.2; margin-bottom: 12px;
+  text-wrap: balance;
+}
+.spec p { font-size: .88rem; line-height: 1.7; color: var(--text-soft); max-width: 30ch; margin: 0 auto; }
+
+.divider-mark {
+  display: flex; align-items: center; gap: 20px;
+  max-width: 320px; margin: 76px auto 68px;
+}
+.divider-mark span { flex: 1; height: 1px; background: var(--gold-hair); }
+.divider-mark svg { width: 26px; height: 26px; color: var(--gold); opacity: .85; flex: none; }
+
+.bases {
+  list-style: none; padding: 0; margin: 0 auto;
+  display: grid; grid-template-columns: repeat(2, 1fr); gap: 32px 20px;
+  max-width: 30em;
+}
+.bases li { display: flex; flex-direction: column; gap: 6px; }
+.bases strong {
+  font-family: var(--serif); font-weight: 400; font-size: 1.1rem; line-height: 1.2;
+  color: var(--text);
+}
+.bases span { font-size: .76rem; line-height: 1.55; color: var(--text-soft); }
+
+/* ==========================================================
+   Áreas de atuação
+   ========================================================== */
+
+.chips {
+  list-style: none; padding: 0; margin: 0 auto;
+  display: flex; flex-wrap: wrap; justify-content: center; gap: 10px;
+  max-width: 34em;
+}
+.chip {
+  padding: 9px 17px;
+  border: 1px solid rgba(184, 134, 11, .45); border-radius: 999px;
+  font-size: .78rem; line-height: 1.4; color: var(--text-soft);
+}
+
+.root-block {
+  margin: 72px auto 0; padding: 46px 26px;
+  background: var(--cream); color: var(--ink);
+  border-radius: 22px;
+}
+.root-block-mark { width: 44px; height: 44px; margin: 0 auto 24px; display: block; color: var(--gold); }
+.root-block-title {
+  font-family: var(--serif); font-weight: 400;
+  font-size: clamp(1.6rem, 6vw, 2.1rem); line-height: 1.18;
+  max-width: 15em; margin: 0 auto 24px; text-wrap: balance;
+}
+.root-block p { max-width: 38ch; margin: 0 auto 1.2em; color: var(--ink-soft); text-wrap: pretty; }
+.root-block p:last-child { margin-bottom: 0; }
+
+/* ==========================================================
+   Relatos de pacientes (carrossel)
+   ========================================================== */
+
+.testi { margin: 48px auto 0; }
+.testi-viewport { overflow: hidden; }
+.testi-track { display: flex; align-items: stretch; transition: transform .7s var(--ease); }
+.testi-card {
+  flex: 0 0 100%; min-width: 0;
+  display: flex; flex-direction: column; align-items: center;
+  padding: 34px 24px 30px;
+  border: 1px solid var(--gold-hair); border-radius: 20px;
+  background: rgba(255, 255, 255, .022);
+}
+.testi-quote {
+  font-family: var(--serif); font-size: 4.2rem; line-height: .7;
+  color: var(--gold); opacity: .55; margin-bottom: 8px;
+}
+.testi-title {
+  font-family: var(--serif); font-style: italic; font-weight: 400;
+  font-size: clamp(1.5rem, 6vw, 1.9rem); line-height: 1.2;
+  color: var(--gold-lt); margin-bottom: 20px; text-wrap: balance;
+}
+.testi-text {
+  text-align: left; font-size: .92rem; line-height: 1.8;
+  color: var(--text); max-width: 42ch; margin: 0 auto;
+}
+.testi-tag {
+  margin-top: 24px; padding: 7px 15px;
+  border: 1px solid var(--gold-hair); border-radius: 999px;
+  font-size: .64rem; letter-spacing: .18em; text-transform: uppercase;
+  color: var(--gold-lt);
+}
+.testi-sign {
+  margin-top: 16px;
+  font-size: .64rem; letter-spacing: .22em; text-transform: uppercase;
+  color: var(--text-soft);
+}
+
+.testi-nav { display: flex; align-items: center; justify-content: center; gap: 20px; margin-top: 26px; }
+.testi-arrow {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 44px; height: 44px; flex: none;
+  border: 1px solid var(--gold-hair); border-radius: 50%;
+  background: transparent; color: var(--gold-lt); cursor: pointer;
+  transition: background-color .4s var(--ease), color .4s var(--ease), border-color .4s var(--ease);
+}
+.testi-arrow svg { width: 18px; height: 18px; }
+.testi-arrow:hover { background: var(--gold); color: var(--navy-deep); border-color: var(--gold); }
+
+.testi-dots { display: flex; align-items: center; gap: 11px; }
+.testi-dot {
+  width: 7px; height: 7px; padding: 0; flex: none;
+  border: 1px solid rgba(184, 134, 11, .5); border-radius: 50%;
+  background: transparent; cursor: pointer;
+  transition: background-color .5s var(--ease), transform .5s var(--ease);
+}
+.testi-dot.is-active { background: var(--gold-lt); border-color: var(--gold-lt); transform: scale(1.4); }
+
+.testi-cta { margin-top: 40px; }
+#relatos .fineprint { margin-top: 30px; }
+
+/* ==========================================================
+   Breakpoints das seções novas
+   ========================================================== */
+
+@media (min-width: 700px) {
+  .specs { grid-template-columns: repeat(2, 1fr); gap: 20px; max-width: none; }
+  .spec { padding: 38px 28px; }
+  .root-block { padding: 60px 48px; }
+  .testi-card { padding: 44px 40px 38px; }
+  .testi-text { font-size: .95rem; }
+}
+
+@media (min-width: 900px) {
+  .bases { grid-template-columns: repeat(4, 1fr); gap: 26px 18px; max-width: none; }
+  .bases strong { font-size: 1.05rem; }
+  .bases span { font-size: .72rem; }
 }
